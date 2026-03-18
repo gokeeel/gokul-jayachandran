@@ -58,6 +58,12 @@ import frame56 from "@assets/frame_56_delay-0.067s_1773860265827.webp";
 import frame57 from "@assets/frame_57_delay-0.067s_1773860265829.webp";
 import frame58 from "@assets/frame_58_delay-0.067s_1773860265832.webp";
 import frame59 from "@assets/frame_59_delay-0.067s_1773860265835.webp";
+import frame60 from "@assets/frame_60_delay-0.067s_1773860357178.webp";
+import frame61 from "@assets/frame_61_delay-0.067s_1773860357180.webp";
+import frame62 from "@assets/frame_62_delay-0.067s_1773860357169.webp";
+import frame63 from "@assets/frame_63_delay-0.067s_1773860357172.webp";
+import frame64 from "@assets/frame_64_delay-0.067s_1773860357174.webp";
+import frame65 from "@assets/frame_65_delay-0.067s_1773860357176.webp";
 
 export const HERO_FRAMES: string[] = [
   frame00, frame01, frame02, frame03, frame04, frame05, frame06, frame07,
@@ -67,7 +73,8 @@ export const HERO_FRAMES: string[] = [
   frame32, frame33, frame34, frame35, frame36, frame37, frame38, frame39,
   frame40, frame41, frame42, frame43, frame44, frame45, frame46, frame47,
   frame48, frame49, frame50, frame51, frame52, frame53, frame54, frame55,
-  frame56, frame57, frame58, frame59,
+  frame56, frame57, frame58, frame59, frame60, frame61, frame62, frame63,
+  frame64, frame65,
 ];
 
 export const FRAME_DURATION_MS = 67;
