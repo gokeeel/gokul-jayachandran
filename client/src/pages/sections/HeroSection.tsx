@@ -1,34 +1,84 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ArrowDown, MapPin } from "lucide-react";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 import { HERO_FRAMES, FRAME_DURATION_MS } from "./heroFrames";
 
 export const HeroSection = (): JSX.Element => {
-  const [currentFrame, setCurrentFrame] = useState(0);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const imagesRef = useRef<HTMLImageElement[]>([]);
+  const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentFrame((prev) => (prev + 1) % HERO_FRAMES.length);
-    }, FRAME_DURATION_MS);
-    return () => clearInterval(interval);
+    const images: HTMLImageElement[] = HERO_FRAMES.map((src) => {
+      const img = new Image();
+      img.src = src;
+      return img;
+    });
+    imagesRef.current = images;
+
+    images[0].onload = () => setReady(true);
+    if (images[0].complete) setReady(true);
   }, []);
+
+  useEffect(() => {
+    if (!ready) return;
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    const resize = () => {
+      canvas.width = canvas.offsetWidth * window.devicePixelRatio;
+      canvas.height = canvas.offsetHeight * window.devicePixelRatio;
+      ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+    };
+    resize();
+    window.addEventListener("resize", resize);
+
+    let frame = 0;
+
+    const drawFrame = () => {
+      const img = imagesRef.current[frame];
+      if (!img?.complete || !img.naturalWidth) return;
+
+      const displayW = canvas.offsetWidth;
+      const displayH = canvas.offsetHeight;
+      const canvasAR = displayW / displayH;
+      const imgAR = img.naturalWidth / img.naturalHeight;
+
+      let sx = 0, sy = 0, sw = img.naturalWidth, sh = img.naturalHeight;
+      if (canvasAR > imgAR) {
+        sh = img.naturalWidth / canvasAR;
+        sy = (img.naturalHeight - sh) / 2;
+      } else {
+        sw = img.naturalHeight * canvasAR;
+        sx = (img.naturalWidth - sw) / 2;
+      }
+
+      ctx.drawImage(img, sx, sy, sw, sh, 0, 0, displayW, displayH);
+      frame = (frame + 1) % HERO_FRAMES.length;
+    };
+
+    drawFrame();
+    const interval = setInterval(drawFrame, FRAME_DURATION_MS);
+
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener("resize", resize);
+    };
+  }, [ready]);
 
   return (
     <section
       data-testid="section-hero"
       className="relative min-h-screen flex items-end md:items-center overflow-hidden"
     >
-      <div className="absolute inset-0">
-        {HERO_FRAMES.map((src, i) => (
-          <img
-            key={i}
-            src={src}
-            alt=""
-            aria-hidden="true"
-            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-75"
-            style={{ opacity: i === currentFrame ? 1 : 0 }}
-          />
-        ))}
+      <div className="absolute inset-0 bg-black">
+        <canvas
+          ref={canvasRef}
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full"
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-black/20" />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/50" />
       </div>
