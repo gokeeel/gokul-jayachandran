@@ -58,6 +58,21 @@ import frame56 from "@assets/frame_56_delay-0.066s_1773854238783.webp";
 import frame57 from "@assets/frame_57_delay-0.066s_1773854238783.webp";
 import frame58 from "@assets/frame_58_delay-0.066s_1773854238784.webp";
 import frame59 from "@assets/frame_59_delay-0.066s_1773854238785.webp";
+import frame60 from "@assets/frame_60_delay-0.066s_1773854345429.webp";
+import frame61 from "@assets/frame_61_delay-0.066s_1773854345429.webp";
+import frame62 from "@assets/frame_62_delay-0.066s_1773854345430.webp";
+import frame63 from "@assets/frame_63_delay-0.066s_1773854345430.webp";
+import frame64 from "@assets/frame_64_delay-0.066s_1773854345431.webp";
+import frame65 from "@assets/frame_65_delay-0.066s_1773854345431.webp";
+import frame66 from "@assets/frame_66_delay-0.066s_1773854345432.webp";
+import frame67 from "@assets/frame_67_delay-0.066s_1773854345432.webp";
+import frame68 from "@assets/frame_68_delay-0.066s_1773854345433.webp";
+import frame69 from "@assets/frame_69_delay-0.066s_1773854345420.webp";
+import frame70 from "@assets/frame_70_delay-0.066s_1773854345421.webp";
+import frame71 from "@assets/frame_71_delay-0.066s_1773854345423.webp";
+import frame72 from "@assets/frame_72_delay-0.066s_1773854345425.webp";
+import frame73 from "@assets/frame_73_delay-0.066s_1773854345426.webp";
+import frame74 from "@assets/frame_74_delay-0.066s_1773854345427.webp";
 
 export const HERO_FRAMES: string[] = [
   frame00, frame01, frame02, frame03, frame04, frame05, frame06, frame07,
@@ -67,7 +82,9 @@ export const HERO_FRAMES: string[] = [
   frame32, frame33, frame34, frame35, frame36, frame37, frame38, frame39,
   frame40, frame41, frame42, frame43, frame44, frame45, frame46, frame47,
   frame48, frame49, frame50, frame51, frame52, frame53, frame54, frame55,
-  frame56, frame57, frame58, frame59,
+  frame56, frame57, frame58, frame59, frame60, frame61, frame62, frame63,
+  frame64, frame65, frame66, frame67, frame68, frame69, frame70, frame71,
+  frame72, frame73, frame74,
 ];
 
 export const FRAME_DURATION_MS = 66;
