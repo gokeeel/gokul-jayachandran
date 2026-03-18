@@ -94,7 +94,7 @@ export const HeroSection = (): JSX.Element => {
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-medium text-white tracking-tight leading-tight">
               Gokul<br />Jayachandran
             </h1>
-            <p className="text-lg md:text-xl text-[#a78bfa] font-light">
+            <p className="text-lg md:text-xl text-[#c07836] font-light">
               Aspiring Techno-Functional Business Analyst
             </p>
           </div>
@@ -108,7 +108,7 @@ export const HeroSection = (): JSX.Element => {
             <a
               href="mailto:gokuljai2006@gmail.com"
               data-testid="link-email-hero"
-              className="px-6 py-3 bg-[#a78bfa] text-white text-sm font-medium rounded-full hover:bg-[#9171e8] transition-colors"
+              className="px-6 py-3 bg-[#c07836] text-white text-sm font-medium rounded-full hover:bg-[#a8662c] transition-colors"
             >
               Get in Touch
             </a>

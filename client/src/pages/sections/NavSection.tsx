@@ -23,7 +23,7 @@ export const NavSection = (): JSX.Element => {
     <nav
       data-testid="navbar"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-black/80 backdrop-blur-md border-b border-[#1e1e1e]" : "bg-transparent"
+        scrolled ? "bg-black/80 backdrop-blur-md border-b border-[#1a1714]" : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-4 flex items-center justify-between">
@@ -32,7 +32,7 @@ export const NavSection = (): JSX.Element => {
           data-testid="link-home"
           className="font-medium text-white text-lg tracking-tight"
         >
-          Gokul<span className="text-[#a78bfa]">.</span>
+          Gokul<span className="text-[#c07836]">.</span>
         </a>
 
         <div className="hidden md:flex items-center gap-8">
@@ -49,7 +49,7 @@ export const NavSection = (): JSX.Element => {
           <a
             href="mailto:gokuljai2006@gmail.com"
             data-testid="button-hire-me"
-            className="px-5 py-2 bg-[#a78bfa] text-white text-sm font-medium rounded-full hover:bg-[#9171e8] transition-colors"
+            className="px-5 py-2 bg-[#c07836] text-white text-sm font-medium rounded-full hover:bg-[#a8662c] transition-colors"
           >
             Hire Me
           </a>
@@ -68,7 +68,7 @@ export const NavSection = (): JSX.Element => {
       </div>
 
       {mobileOpen && (
-        <div id="mobile-menu" className="md:hidden bg-black/95 backdrop-blur-md border-t border-[#1e1e1e] px-6 py-6 flex flex-col gap-4">
+        <div id="mobile-menu" className="md:hidden bg-black/95 backdrop-blur-md border-t border-[#1a1714] px-6 py-6 flex flex-col gap-4">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -83,7 +83,7 @@ export const NavSection = (): JSX.Element => {
           <a
             href="mailto:gokuljai2006@gmail.com"
             data-testid="button-mobile-hire-me"
-            className="px-5 py-2 bg-[#a78bfa] text-white text-sm font-medium rounded-full hover:bg-[#9171e8] transition-colors text-center mt-2"
+            className="px-5 py-2 bg-[#c07836] text-white text-sm font-medium rounded-full hover:bg-[#a8662c] transition-colors text-center mt-2"
           >
             Hire Me
           </a>

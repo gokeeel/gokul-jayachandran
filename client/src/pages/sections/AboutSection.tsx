@@ -29,7 +29,7 @@ export const AboutSection = (): JSX.Element => {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row gap-16">
           <div className="flex-1">
-            <p className="text-[#a78bfa] text-sm font-medium uppercase tracking-widest mb-4">
+            <p className="text-[#c07836] text-sm font-medium uppercase tracking-widest mb-4">
               About Me
             </p>
             <h2 className="section-heading mb-6">
@@ -67,7 +67,7 @@ export const AboutSection = (): JSX.Element => {
                 data-testid={`card-highlight-${index}`}
                 className="glass-card p-6 flex flex-col gap-4"
               >
-                <div className="w-12 h-12 flex items-center justify-center bg-[#a78bfa]/10 text-[#a78bfa] rounded-xl">
+                <div className="w-12 h-12 flex items-center justify-center bg-[#c07836]/10 text-[#c07836] rounded-xl">
                   {item.icon}
                 </div>
                 <h3 className="text-white font-medium text-lg">{item.title}</h3>
