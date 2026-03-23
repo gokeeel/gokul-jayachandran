@@ -1,33 +1,10 @@
-import { Briefcase, Code, Database, BarChart3 } from "lucide-react";
-
-const highlights = [
-  {
-    icon: <Briefcase size={24} />,
-    title: "Requirements Engineering",
-    desc: "BRD, FRS, User Stories, Gap Analysis",
-  },
-  {
-    icon: <Code size={24} />,
-    title: "ERP Consulting",
-    desc: "SAP Modules, Process Mapping, Workflow Design",
-  },
-  {
-    icon: <Database size={24} />,
-    title: "Blockchain Solutions",
-    desc: "Smart Contracts, Decentralized Apps, Web3",
-  },
-  {
-    icon: <BarChart3 size={24} />,
-    title: "Data & Analytics",
-    desc: "SQL, Python, Reporting, Decision Models",
-  },
-];
+import profilePhoto from "@assets/profile-photo_1774278169861.jpg";
 
 export const AboutSection = (): JSX.Element => {
   return (
     <section id="about" data-testid="section-about" className="py-24 px-6 md:px-12">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row gap-16">
+        <div className="flex flex-col md:flex-row gap-16 items-center">
           <div className="flex-1">
             <p className="text-[#4d9e8e] text-sm font-medium uppercase tracking-widest mb-4">
               About Me
@@ -60,20 +37,16 @@ export const AboutSection = (): JSX.Element => {
             </div>
           </div>
 
-          <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-5">
-            {highlights.map((item, index) => (
-              <div
-                key={index}
-                data-testid={`card-highlight-${index}`}
-                className="glass-card p-6 flex flex-col gap-4"
-              >
-                <div className="w-12 h-12 flex items-center justify-center bg-[#4d9e8e]/10 text-[#4d9e8e] rounded-xl">
-                  {item.icon}
-                </div>
-                <h3 className="text-white font-medium text-lg">{item.title}</h3>
-                <p className="text-[#a9a9a9] text-sm font-light">{item.desc}</p>
-              </div>
-            ))}
+          <div className="flex-shrink-0 flex justify-center">
+            <div className="relative w-72 h-80 md:w-80 md:h-96 rounded-2xl overflow-hidden border border-white/8">
+              <img
+                src={profilePhoto}
+                alt="Gokul Jayachandran"
+                data-testid="img-profile-about"
+                className="w-full h-full object-cover object-top"
+              />
+              <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-white/5" />
+            </div>
           </div>
         </div>
       </div>
