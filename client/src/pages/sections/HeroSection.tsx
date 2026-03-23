@@ -23,6 +23,9 @@ export const HeroSection = (): JSX.Element => {
 
         {/* Both: subtle top vignette for nav readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-transparent" />
+
+        {/* Subtle uniform black layer for overall text legibility */}
+        <div className="absolute inset-0 bg-black/30" />
       </div>
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 pb-24 md:pb-0 pt-28 flex justify-start md:justify-end">
