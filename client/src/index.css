@@ -6,34 +6,34 @@
 
 @layer base {
   :root {
-    --background: 22 8% 4%;
+    --background: 175 10% 5%;
     --foreground: 0 0% 100%;
 
-    --muted: 22 5% 11%;
+    --muted: 175 6% 11%;
     --muted-foreground: 0 0% 66%;
 
-    --popover: 22 8% 4%;
+    --popover: 175 10% 5%;
     --popover-foreground: 0 0% 100%;
 
-    --border: 22 5% 17%;
-    --input: 22 5% 17%;
+    --border: 175 6% 17%;
+    --input: 175 6% 17%;
 
-    --card: 22 4% 10%;
+    --card: 175 5% 10%;
     --card-foreground: 0 0% 100%;
 
-    --primary: 28 52% 50%;
+    --primary: 168 35% 44%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 22 5% 11%;
+    --secondary: 175 6% 11%;
     --secondary-foreground: 0 0% 100%;
 
-    --accent: 28 52% 50%;
+    --accent: 168 35% 44%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 100% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --ring: 28 52% 50%;
+    --ring: 168 35% 44%;
 
     --radius: 0.5rem;
   }
@@ -66,16 +66,16 @@
   }
 
   .glass-card {
-    @apply bg-[#1a1714] rounded-[24px] border border-[#2a2520] transition-all duration-300;
+    @apply bg-[#0d1715] rounded-[24px] border border-[#1a2624] transition-all duration-300;
   }
 
   .glass-card:hover {
-    @apply border-[#3a3028] shadow-lg;
-    box-shadow: 0 0 30px rgba(192, 120, 54, 0.07);
+    @apply border-[#253a37] shadow-lg;
+    box-shadow: 0 0 30px rgba(77, 158, 142, 0.07);
   }
 
   .skill-pill {
-    @apply inline-flex items-center px-5 py-2.5 bg-[#130f0d] rounded-full text-white text-sm font-light border border-[#2a2520];
+    @apply inline-flex items-center px-5 py-2.5 bg-[#0a1211] rounded-full text-white text-sm font-light border border-[#1a2624];
   }
 }
 
@@ -111,14 +111,14 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #0a0907;
+  background: #080e0d;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #2e2820;
+  background: #1e302e;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #4a3e30;
+  background: #2e4a47;
 }

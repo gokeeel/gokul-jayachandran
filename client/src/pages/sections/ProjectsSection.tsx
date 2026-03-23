@@ -9,7 +9,7 @@ const projects = [
     tech: ["Solidity", "Web3.js", "Python", "MySQL"],
     repoUrl: "https://github.com/gokeeel",
     demoUrl: "https://github.com/gokeeel",
-    accent: "#c07836",
+    accent: "#4d9e8e",
   },
   {
     title: "BRD Automation Tool",
@@ -42,7 +42,7 @@ export const ProjectsSection = (): JSX.Element => {
     <section id="projects" data-testid="section-projects" className="py-24 px-6 md:px-12 bg-[#0a0a0a]">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <p className="text-[#c07836] text-sm font-medium uppercase tracking-widest mb-4">
+          <p className="text-[#4d9e8e] text-sm font-medium uppercase tracking-widest mb-4">
             Featured Work
           </p>
           <h2 className="section-heading">Projects</h2>
@@ -85,7 +85,7 @@ export const ProjectsSection = (): JSX.Element => {
               </div>
 
               <div className="flex flex-col gap-3">
-                <h3 className="text-white font-medium text-2xl group-hover:text-[#c07836] transition-colors">
+                <h3 className="text-white font-medium text-2xl group-hover:text-[#4d9e8e] transition-colors">
                   {project.title}
                 </h3>
                 <p className="text-[#a9a9a9] text-base font-light leading-relaxed">
@@ -97,7 +97,7 @@ export const ProjectsSection = (): JSX.Element => {
                 {project.tech.map((t, i) => (
                   <span
                     key={i}
-                    className="px-3 py-1 bg-[#130f0d] rounded-full text-[#a9a9a9] text-xs border border-[#2a2520]"
+                    className="px-3 py-1 bg-[#0a1211] rounded-full text-[#a9a9a9] text-xs border border-[#1a2624]"
                   >
                     {t}
                   </span>

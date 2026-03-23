@@ -32,7 +32,7 @@ export const ExperienceSection = (): JSX.Element => {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
-            <p className="text-[#c07836] text-sm font-medium uppercase tracking-widest mb-4">
+            <p className="text-[#4d9e8e] text-sm font-medium uppercase tracking-widest mb-4">
               Career
             </p>
             <h2 className="section-heading mb-10">Experience</h2>
@@ -44,12 +44,12 @@ export const ExperienceSection = (): JSX.Element => {
                   data-testid={`card-experience-${index}`}
                   className="glass-card p-8 relative"
                 >
-                  <div className="absolute top-8 left-0 w-1 h-12 bg-[#c07836] rounded-r" />
+                  <div className="absolute top-8 left-0 w-1 h-12 bg-[#4d9e8e] rounded-r" />
                   <div className="flex flex-col gap-4">
                     <div className="flex items-start justify-between flex-wrap gap-2">
                       <div>
                         <h3 className="text-white font-medium text-xl">{exp.role}</h3>
-                        <div className="flex items-center gap-2 text-[#c07836] text-sm mt-1">
+                        <div className="flex items-center gap-2 text-[#4d9e8e] text-sm mt-1">
                           <Building2 size={14} />
                           <span>{exp.company}</span>
                         </div>
@@ -71,7 +71,7 @@ export const ExperienceSection = (): JSX.Element => {
           </div>
 
           <div>
-            <p className="text-[#c07836] text-sm font-medium uppercase tracking-widest mb-4">
+            <p className="text-[#4d9e8e] text-sm font-medium uppercase tracking-widest mb-4">
               Credentials
             </p>
             <h2 className="section-heading mb-10">Certifications</h2>
@@ -83,14 +83,14 @@ export const ExperienceSection = (): JSX.Element => {
                   data-testid={`card-certification-${index}`}
                   className="glass-card p-6 flex items-center gap-5"
                 >
-                  <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-[#c07836]/10 text-[#c07836] rounded-xl">
+                  <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-[#4d9e8e]/10 text-[#4d9e8e] rounded-xl">
                     <Link2 size={20} />
                   </div>
                   <div className="flex-1 min-w-0">
                     <h4 className="text-white font-medium text-base truncate">{cert.name}</h4>
                     <p className="text-[#a9a9a9] text-sm font-light">{cert.issuer}</p>
                   </div>
-                  <span className="text-[#c07836] text-sm font-medium flex-shrink-0">{cert.year}</span>
+                  <span className="text-[#4d9e8e] text-sm font-medium flex-shrink-0">{cert.year}</span>
                 </div>
               ))}
             </div>

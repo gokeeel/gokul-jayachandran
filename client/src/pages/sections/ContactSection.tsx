@@ -5,7 +5,7 @@ export const ContactSection = (): JSX.Element => {
   return (
     <section id="contact" data-testid="section-contact" className="py-24 px-6 md:px-12 bg-[#0a0a0a]">
       <div className="max-w-3xl mx-auto text-center">
-        <p className="text-[#c07836] text-sm font-medium uppercase tracking-widest mb-4">
+        <p className="text-[#4d9e8e] text-sm font-medium uppercase tracking-widest mb-4">
           Get In Touch
         </p>
         <h2 className="section-heading mb-6">Let's Connect</h2>
@@ -18,7 +18,7 @@ export const ContactSection = (): JSX.Element => {
           <a
             href="mailto:gokuljai2006@gmail.com"
             data-testid="button-email-contact"
-            className="flex items-center gap-3 px-8 py-4 bg-[#c07836] text-white font-medium rounded-full hover:bg-[#a8662c] transition-colors"
+            className="flex items-center gap-3 px-8 py-4 bg-[#4d9e8e] text-white font-medium rounded-full hover:bg-[#3f857a] transition-colors"
           >
             <Mail size={18} />
             Drop Me a Mail
@@ -29,7 +29,7 @@ export const ContactSection = (): JSX.Element => {
             target="_blank"
             rel="noopener noreferrer"
             data-testid="button-linkedin-contact"
-            className="flex items-center gap-3 px-8 py-4 bg-[#1a1714] text-white font-medium rounded-full border border-[#2a2520] hover:border-[#3a3028] transition-colors"
+            className="flex items-center gap-3 px-8 py-4 bg-[#0d1715] text-white font-medium rounded-full border border-[#1a2624] hover:border-[#253a37] transition-colors"
           >
             <SiLinkedin size={18} />
             Connect on LinkedIn
@@ -41,7 +41,7 @@ export const ContactSection = (): JSX.Element => {
             <MapPin size={14} />
             <span>Chennai, India</span>
           </div>
-          <span className="text-[#2a2520]">|</span>
+          <span className="text-[#1a2624]">|</span>
           <a
             href="https://github.com/gokeeel"
             target="_blank"
@@ -55,7 +55,7 @@ export const ContactSection = (): JSX.Element => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto mt-24 pt-8 border-t border-[#1a1714] flex flex-col sm:flex-row items-center justify-between gap-4 text-[#a9a9a9] text-sm">
+      <div className="max-w-7xl mx-auto mt-24 pt-8 border-t border-[#0d1715] flex flex-col sm:flex-row items-center justify-between gap-4 text-[#a9a9a9] text-sm">
         <span data-testid="text-copyright">Gokul Jayachandran</span>
         <span className="font-light">Aspiring Techno-Functional Business Analyst</span>
       </div>

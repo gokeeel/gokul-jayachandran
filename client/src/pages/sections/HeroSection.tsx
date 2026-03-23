@@ -1,86 +1,21 @@
-import { useEffect, useRef, useState } from "react";
 import { ArrowDown, MapPin } from "lucide-react";
 import { SiGithub, SiLinkedin } from "react-icons/si";
-import { HERO_FRAMES, FRAME_DURATION_MS } from "./heroFrames";
+import heroBg from "@assets/ezgif.com-webp-maker_1774277720139.webp";
 
 export const HeroSection = (): JSX.Element => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const imagesRef = useRef<HTMLImageElement[]>([]);
-  const [ready, setReady] = useState(false);
-
-  useEffect(() => {
-    const images: HTMLImageElement[] = HERO_FRAMES.map((src) => {
-      const img = new Image();
-      img.src = src;
-      return img;
-    });
-    imagesRef.current = images;
-
-    images[0].onload = () => setReady(true);
-    if (images[0].complete) setReady(true);
-  }, []);
-
-  useEffect(() => {
-    if (!ready) return;
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return;
-
-    const resize = () => {
-      canvas.width = canvas.offsetWidth * window.devicePixelRatio;
-      canvas.height = canvas.offsetHeight * window.devicePixelRatio;
-      ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
-    };
-    resize();
-    window.addEventListener("resize", resize);
-
-    let frame = 0;
-
-    const drawFrame = () => {
-      const img = imagesRef.current[frame];
-      if (!img?.complete || !img.naturalWidth) return;
-
-      const displayW = canvas.offsetWidth;
-      const displayH = canvas.offsetHeight;
-      const canvasAR = displayW / displayH;
-      const imgAR = img.naturalWidth / img.naturalHeight;
-
-      let sx = 0, sy = 0, sw = img.naturalWidth, sh = img.naturalHeight;
-      if (canvasAR > imgAR) {
-        sh = img.naturalWidth / canvasAR;
-        sy = (img.naturalHeight - sh) / 2;
-      } else {
-        sw = img.naturalHeight * canvasAR;
-        sx = (img.naturalWidth - sw) / 2;
-      }
-
-      ctx.drawImage(img, sx, sy, sw, sh, 0, 0, displayW, displayH);
-      frame = (frame + 1) % HERO_FRAMES.length;
-    };
-
-    drawFrame();
-    const interval = setInterval(drawFrame, FRAME_DURATION_MS);
-
-    return () => {
-      clearInterval(interval);
-      window.removeEventListener("resize", resize);
-    };
-  }, [ready]);
-
   return (
     <section
       data-testid="section-hero"
       className="relative min-h-screen flex items-end md:items-center overflow-hidden"
     >
-      <div className="absolute inset-0 bg-black">
-        <canvas
-          ref={canvasRef}
-          aria-hidden="true"
-          className="absolute inset-0 w-full h-full"
+      <div className="absolute inset-0">
+        <img
+          src={heroBg}
+          alt="Gokul Jayachandran overlooking a quarry lake"
+          className="absolute inset-0 w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/40 to-black/20" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/55 to-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/40" />
       </div>
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 pb-24 md:pb-0 pt-28">
@@ -94,7 +29,7 @@ export const HeroSection = (): JSX.Element => {
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-medium text-white tracking-tight leading-tight">
               Gokul<br />Jayachandran
             </h1>
-            <p className="text-lg md:text-xl text-[#c07836] font-light">
+            <p className="text-lg md:text-xl text-[#4d9e8e] font-light">
               Aspiring Techno-Functional Business Analyst
             </p>
           </div>
@@ -108,7 +43,7 @@ export const HeroSection = (): JSX.Element => {
             <a
               href="mailto:gokuljai2006@gmail.com"
               data-testid="link-email-hero"
-              className="px-6 py-3 bg-[#c07836] text-white text-sm font-medium rounded-full hover:bg-[#a8662c] transition-colors"
+              className="px-6 py-3 bg-[#4d9e8e] text-white text-sm font-medium rounded-full hover:bg-[#3f857a] transition-colors"
             >
               Get in Touch
             </a>

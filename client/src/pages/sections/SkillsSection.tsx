@@ -55,7 +55,7 @@ export const SkillsSection = (): JSX.Element => {
     <section id="skills" data-testid="section-skills" className="py-24 px-6 md:px-12">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <p className="text-[#c07836] text-sm font-medium uppercase tracking-widest mb-4">
+          <p className="text-[#4d9e8e] text-sm font-medium uppercase tracking-widest mb-4">
             Skills & Tools
           </p>
           <h2 className="section-heading">What I Work With</h2>
@@ -82,7 +82,7 @@ export const SkillsSection = (): JSX.Element => {
                       key={i}
                       className="group flex flex-col items-center gap-2"
                     >
-                      <div className="w-16 h-16 flex items-center justify-center bg-[#130f0d] rounded-2xl border border-[#2a2520] group-hover:border-[#3a3028] transition-all duration-200"
+                      <div className="w-16 h-16 flex items-center justify-center bg-[#0a1211] rounded-2xl border border-[#1a2624] group-hover:border-[#253a37] transition-all duration-200"
                         style={{ color: item.color }}>
                         {item.icon}
                       </div>
