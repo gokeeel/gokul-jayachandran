@@ -1,6 +1,55 @@
+import { useRef, useState } from "react";
 import { ArrowDown, MapPin } from "lucide-react";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 import heroBg from "@assets/ezgif.com-webp-maker_1774277720139.webp";
+
+const GlassCard = ({ children }: { children: React.ReactNode }) => {
+  const cardRef = useRef<HTMLDivElement>(null);
+  const [spot, setSpot] = useState({ x: 50, y: 50, opacity: 0 });
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = cardRef.current?.getBoundingClientRect();
+    if (!rect) return;
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    setSpot({ x, y, opacity: 1 });
+  };
+
+  const handleMouseLeave = () => setSpot((s) => ({ ...s, opacity: 0 }));
+
+  return (
+    <div
+      ref={cardRef}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      className="relative overflow-hidden rounded-2xl border border-white/10 backdrop-blur-md bg-white/5 p-4 md:p-5 cursor-default transition-all duration-300"
+      style={{
+        boxShadow: "0 4px 24px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.06)",
+      }}
+    >
+      {/* Mouse-tracking spotlight */}
+      <div
+        className="pointer-events-none absolute inset-0 rounded-2xl transition-opacity duration-300"
+        style={{
+          opacity: spot.opacity,
+          background: `radial-gradient(circle at ${spot.x}% ${spot.y}%, rgba(77,158,142,0.18) 0%, rgba(126,232,216,0.08) 40%, transparent 70%)`,
+        }}
+      />
+      {/* Shimmer border highlight */}
+      <div
+        className="pointer-events-none absolute inset-0 rounded-2xl transition-opacity duration-300"
+        style={{
+          opacity: spot.opacity,
+          background: `radial-gradient(circle at ${spot.x}% ${spot.y}%, rgba(255,255,255,0.12) 0%, transparent 60%)`,
+          maskImage: "linear-gradient(black, black)",
+          WebkitMaskImage:
+            "linear-gradient(to bottom, rgba(255,255,255,0.3) 0%, transparent 100%)",
+        }}
+      />
+      {children}
+    </div>
+  );
+};
 
 export const HeroSection = (): JSX.Element => {
   return (
@@ -15,17 +64,13 @@ export const HeroSection = (): JSX.Element => {
           alt="Gokul Jayachandran overlooking a quarry lake"
           className="absolute inset-0 w-full h-full object-cover object-[center_55%]"
         />
-        {/* Right-side darkening for text — all screen sizes */}
         <div className="absolute inset-0 bg-gradient-to-l from-black/92 via-black/55 to-transparent" />
-        {/* Top vignette for nav */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-transparent" />
-        {/* Bottom vignette for grounding */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-        {/* Subtle overall dark layer */}
         <div className="absolute inset-0 bg-black/25" />
       </div>
 
-      {/* Text block — absolutely pinned to the right side */}
+      {/* Text block */}
       <div className="absolute right-6 md:right-12 bottom-20 md:bottom-auto md:top-1/2 md:-translate-y-1/2 z-10 w-[52%] md:max-w-lg">
         <div className="flex flex-col gap-4 md:gap-6">
           <div className="flex items-center gap-2 text-[#a9a9a9] text-xs md:text-sm">
@@ -44,51 +89,54 @@ export const HeroSection = (): JSX.Element => {
             </p>
           </div>
 
-          <div className="flex flex-col gap-4 md:gap-5 p-4 md:p-5 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10">
-            <p className="text-[#d0d0d0] text-xs md:text-base font-light leading-relaxed hidden sm:block">
+          {/* Interactive glassmorphism — description text only */}
+          <GlassCard>
+            <p className="relative z-10 text-[#d0d0d0] text-xs md:text-base font-light leading-relaxed hidden sm:block">
               Building structured, scalable systems at the intersection of
               technology and strategy — BA · SAP · Blockchain · SQL · Python
             </p>
+          </GlassCard>
 
-            <div className="flex items-center gap-2 md:gap-3 flex-wrap">
-              <a
-                href="mailto:gokuljai2006@gmail.com"
-                data-testid="link-email-hero"
-                className="px-4 py-2 md:px-6 md:py-3 bg-[#4d9e8e] text-white text-xs md:text-sm font-medium rounded-full hover:bg-[#3f857a] transition-colors"
-              >
-                Get in Touch
-              </a>
-              <a
-                href="#projects"
-                data-testid="link-view-work"
-                className="px-4 py-2 md:px-6 md:py-3 bg-white/10 text-white text-xs md:text-sm font-medium rounded-full border border-white/20 hover:bg-white/20 transition-colors"
-              >
-                View Work
-              </a>
-            </div>
+          {/* Buttons — outside the glass */}
+          <div className="flex items-center gap-2 md:gap-3 flex-wrap">
+            <a
+              href="mailto:gokuljai2006@gmail.com"
+              data-testid="link-email-hero"
+              className="px-4 py-2 md:px-6 md:py-3 bg-[#4d9e8e] text-white text-xs md:text-sm font-medium rounded-full hover:bg-[#3f857a] transition-colors"
+            >
+              Get in Touch
+            </a>
+            <a
+              href="#projects"
+              data-testid="link-view-work"
+              className="px-4 py-2 md:px-6 md:py-3 bg-white/10 backdrop-blur-sm text-white text-xs md:text-sm font-medium rounded-full border border-white/20 hover:bg-white/20 transition-colors"
+            >
+              View Work
+            </a>
+          </div>
 
-            <div className="flex items-center gap-3">
-              <a
-                href="https://github.com/gokeeel"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-testid="link-github"
-                aria-label="GitHub profile"
-                className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-white/10 rounded-full text-white hover:bg-white/20 transition-all duration-200"
-              >
-                <SiGithub size={15} />
-              </a>
-              <a
-                href="https://linkedin.com/in/gokeeel"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-testid="link-linkedin"
-                aria-label="LinkedIn profile"
-                className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-white/10 rounded-full text-white hover:bg-white/20 transition-all duration-200"
-              >
-                <SiLinkedin size={15} />
-              </a>
-            </div>
+          {/* Social links — outside the glass */}
+          <div className="flex items-center gap-3">
+            <a
+              href="https://github.com/gokeeel"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="link-github"
+              aria-label="GitHub profile"
+              className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-white/10 backdrop-blur-sm rounded-full text-white hover:bg-white/20 transition-all duration-200"
+            >
+              <SiGithub size={15} />
+            </a>
+            <a
+              href="https://linkedin.com/in/gokeeel"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="link-linkedin"
+              aria-label="LinkedIn profile"
+              className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-white/10 backdrop-blur-sm rounded-full text-white hover:bg-white/20 transition-all duration-200"
+            >
+              <SiLinkedin size={15} />
+            </a>
           </div>
         </div>
       </div>
