@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { ArrowDown, MapPin } from "lucide-react";
 import { SiGithub, SiLinkedin } from "react-icons/si";
-import heroBg from "@assets/ezgif.com-webp-maker_1774277720139.webp";
+import heroBg from "@assets/wmremove-transformed_(3)_1775409696418.png";
 
 const GlassCard = ({ children }: { children: React.ReactNode }) => {
   const cardRef = useRef<HTMLDivElement>(null);
