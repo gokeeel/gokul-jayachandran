@@ -37,7 +37,7 @@ export const HeroSection = (): JSX.Element => {
             <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-medium text-white tracking-tight leading-tight">
               Gokul<br />Jayachandran
             </h1>
-            <p className="text-sm md:text-xl text-[#4d9e8e] font-light">
+            <p className="text-sm md:text-xl text-[#4d9e8e] font-light" style={{ textShadow: "0 0 20px rgba(77,158,142,0.8), 0 2px 8px rgba(0,0,0,0.9)" }}>
               Aspiring Techno-Functional Business Analyst
             </p>
           </div>
