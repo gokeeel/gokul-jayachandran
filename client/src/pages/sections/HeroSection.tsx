@@ -15,11 +15,8 @@ export const HeroSection = (): JSX.Element => {
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
 
-        {/* Mobile: darken bottom so text stays readable */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/20 md:hidden" />
-
-        {/* Desktop: darken right side so text on right is readable, left stays open */}
-        <div className="absolute inset-0 hidden md:block bg-gradient-to-l from-black/92 via-black/60 to-transparent" />
+        {/* Darken right side on all screen sizes so text is readable */}
+        <div className="absolute inset-0 bg-gradient-to-l from-black/92 via-black/60 to-transparent" />
 
         {/* Both: subtle top vignette for nav readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-transparent" />
@@ -29,7 +26,7 @@ export const HeroSection = (): JSX.Element => {
       </div>
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 pb-24 md:pb-0 pt-28 flex justify-end">
-        <div className="w-full md:max-w-lg flex flex-col gap-6">
+        <div className="max-w-sm md:max-w-lg flex flex-col gap-6">
           <div className="flex items-center gap-2 text-[#a9a9a9] text-sm">
             <MapPin size={13} />
             <span>Chennai, India</span>
