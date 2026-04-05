@@ -100,8 +100,8 @@ export const HeroSection = (): JSX.Element => {
           {/* Buttons — outside the glass */}
           <div className="flex items-center gap-2 md:gap-3 flex-wrap">
             <a
-              href="mailto:gokuljai2006@gmail.com"
-              data-testid="link-email-hero"
+              href="#contact"
+              data-testid="link-get-in-touch"
               className="px-4 py-2 md:px-6 md:py-3 bg-[#4d9e8e] text-white text-xs md:text-sm font-medium rounded-full hover:bg-[#3f857a] transition-colors"
             >
               Get in Touch

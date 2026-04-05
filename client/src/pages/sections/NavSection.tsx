@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Mail } from "lucide-react";
+import { Menu, X, UserRound, Cpu, Lightbulb, Network, MessageSquare, FileText } from "lucide-react";
 
 const navItems = [
-  { label: "About", abbr: "A", href: "#about" },
-  { label: "Skills", abbr: "Sk", href: "#skills" },
-  { label: "Projects", abbr: "Pr", href: "#projects" },
-  { label: "Experience", abbr: "Ex", href: "#experience" },
-  { label: "Contact", abbr: "Co", href: "#contact" },
+  { label: "About",      Icon: UserRound,     href: "#about" },
+  { label: "Skills",     Icon: Cpu,           href: "#skills" },
+  { label: "Projects",   Icon: Lightbulb,     href: "#projects" },
+  { label: "Experience", Icon: Network,        href: "#experience" },
+  { label: "Contact",    Icon: MessageSquare, href: "#contact" },
 ];
 
 export const NavSection = (): JSX.Element => {
@@ -51,11 +51,13 @@ export const NavSection = (): JSX.Element => {
               </a>
             ))}
             <a
-              href="mailto:gokuljai2006@gmail.com"
-              data-testid="button-hire-me"
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="button-resume"
               className="ml-1 px-5 py-2 rounded-full text-sm font-medium text-[#7ee8d8] bg-[#4d9e8e]/20 border border-[#4d9e8e]/35 hover:bg-[#4d9e8e]/35 hover:border-[#4d9e8e]/60 backdrop-blur-sm transition-all duration-200"
             >
-              Hire Me
+              Resume
             </a>
           </div>
 
@@ -85,11 +87,13 @@ export const NavSection = (): JSX.Element => {
               </a>
             ))}
             <a
-              href="mailto:gokuljai2006@gmail.com"
-              data-testid="button-mobile-hire-me"
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="button-mobile-resume"
               className="mt-2 px-5 py-2.5 rounded-full text-sm font-medium text-[#7ee8d8] bg-[#4d9e8e]/20 border border-[#4d9e8e]/35 hover:bg-[#4d9e8e]/35 transition-all duration-200 text-center"
             >
-              Hire Me
+              Resume
             </a>
           </div>
         )}
@@ -115,18 +119,16 @@ export const NavSection = (): JSX.Element => {
               : "0 4px 20px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.05)",
           }}
         >
-          {navItems.map((item) => (
+          {navItems.map(({ label, Icon, href }) => (
             <a
-              key={item.href}
-              href={item.href}
-              data-testid={`link-sidebar-${item.label.toLowerCase()}`}
+              key={href}
+              href={href}
+              data-testid={`link-sidebar-${label.toLowerCase()}`}
               className={`flex items-center gap-2.5 rounded-xl text-white transition-all duration-200 hover:scale-105 hover:bg-white/12 ${
                 sidebarHovered ? "px-4 py-2.5 justify-start" : "px-2.5 py-2.5 justify-center"
               }`}
             >
-              <span className="text-[#7ee8d8] font-bold text-xs w-5 text-center shrink-0 leading-none">
-                {item.abbr}
-              </span>
+              <Icon size={16} className="text-[#7ee8d8] shrink-0" />
               <span
                 className="text-sm font-light text-[#e8e8e8] whitespace-nowrap overflow-hidden transition-all duration-300"
                 style={{
@@ -134,22 +136,24 @@ export const NavSection = (): JSX.Element => {
                   opacity: sidebarHovered ? 1 : 0,
                 }}
               >
-                {item.label}
+                {label}
               </span>
             </a>
           ))}
 
           <div className="h-px bg-white/10 mx-1 my-1" />
 
-          {/* Hire Me */}
+          {/* Resume */}
           <a
-            href="mailto:gokuljai2006@gmail.com"
-            data-testid="link-sidebar-hire"
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-testid="link-sidebar-resume"
             className={`flex items-center gap-2.5 rounded-xl text-[#7ee8d8] bg-[#4d9e8e]/20 border border-[#4d9e8e]/35 hover:bg-[#4d9e8e]/40 hover:scale-105 transition-all duration-200 ${
               sidebarHovered ? "px-4 py-2.5 justify-start" : "px-2.5 py-2.5 justify-center"
             }`}
           >
-            <Mail size={13} className="shrink-0" />
+            <FileText size={15} className="shrink-0" />
             <span
               className="text-sm font-medium whitespace-nowrap overflow-hidden transition-all duration-300"
               style={{
@@ -157,7 +161,7 @@ export const NavSection = (): JSX.Element => {
                 opacity: sidebarHovered ? 1 : 0,
               }}
             >
-              Hire Me
+              Resume
             </span>
           </a>
         </div>
@@ -196,10 +200,12 @@ export const NavSection = (): JSX.Element => {
               </a>
             ))}
             <a
-              href="mailto:gokuljai2006@gmail.com"
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-4 px-5 py-3 rounded-full text-sm font-medium text-[#7ee8d8] bg-[#4d9e8e]/25 border border-[#4d9e8e]/40 text-center hover:bg-[#4d9e8e]/40 transition-colors"
             >
-              Hire Me
+              Resume
             </a>
           </div>
         </div>
