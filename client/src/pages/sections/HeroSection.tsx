@@ -82,11 +82,9 @@ export const HeroSection = (): JSX.Element => {
             <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-medium text-white tracking-tight leading-tight">
               Gokul<br />Jayachandran
             </h1>
-            <p className="text-sm md:text-xl font-light">
-              <span className="px-3 py-1.5 rounded-xl bg-black/50 backdrop-blur-sm text-[#7ee8d8] border border-[#4d9e8e]/40 leading-snug">
-                Aspiring Techno-Functional Business Analyst
-              </span>
-            </p>
+            <div className="inline-block px-3 py-1.5 rounded-xl bg-black/50 backdrop-blur-sm text-[#7ee8d8] border border-[#4d9e8e]/40 text-sm md:text-xl font-light leading-snug">
+              Aspiring Techno-Functional Business Analyst
+            </div>
           </div>
 
           {/* Interactive glassmorphism — description text only, hidden on mobile */}
