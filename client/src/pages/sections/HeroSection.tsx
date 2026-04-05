@@ -26,7 +26,7 @@ export const HeroSection = (): JSX.Element => {
       </div>
 
       {/* Text block — absolutely pinned to the right side */}
-      <div className="absolute right-6 md:right-12 bottom-20 md:top-1/2 md:-translate-y-1/2 z-10 w-[52%] md:max-w-lg">
+      <div className="absolute right-6 md:right-12 bottom-20 md:bottom-auto md:top-1/2 md:-translate-y-1/2 z-10 w-[52%] md:max-w-lg">
         <div className="flex flex-col gap-4 md:gap-6">
           <div className="flex items-center gap-2 text-[#a9a9a9] text-xs md:text-sm">
             <MapPin size={12} />
