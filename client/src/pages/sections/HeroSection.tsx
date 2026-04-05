@@ -28,7 +28,7 @@ export const HeroSection = (): JSX.Element => {
         <div className="absolute inset-0 bg-black/30" />
       </div>
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 pb-24 md:pb-0 pt-28 flex justify-start md:justify-end">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 pb-24 md:pb-0 pt-28 flex justify-end">
         <div className="w-full md:max-w-lg flex flex-col gap-6">
           <div className="flex items-center gap-2 text-[#a9a9a9] text-sm">
             <MapPin size={13} />
