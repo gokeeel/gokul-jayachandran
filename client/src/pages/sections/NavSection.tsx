@@ -10,12 +10,16 @@ const navItems = [
 ];
 
 export const NavSection = (): JSX.Element => {
-  const [scrolled, setScrolled] = useState(false);
+  const [navHidden, setNavHidden] = useState(false);    // top nav vanishes on first scroll
+  const [sidebarVisible, setSidebarVisible] = useState(false); // sidebar at hero→about boundary
   const [mobileOpen, setMobileOpen] = useState(false);
   const [sidebarHovered, setSidebarHovered] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 40);
+    const handleScroll = () => {
+      setNavHidden(window.scrollY > 20);
+      setSidebarVisible(window.scrollY >= window.innerHeight * 0.85);
+    };
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -26,7 +30,7 @@ export const NavSection = (): JSX.Element => {
       <nav
         data-testid="navbar"
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled ? "opacity-0 pointer-events-none -translate-y-3" : "opacity-100 translate-y-0"
+          navHidden ? "opacity-0 pointer-events-none -translate-y-3" : "opacity-100 translate-y-0"
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-4 flex items-center justify-between">
@@ -102,7 +106,7 @@ export const NavSection = (): JSX.Element => {
       {/* ── Right vertical sidebar — desktop only, appears on scroll ── */}
       <div
         className={`fixed right-0 top-1/2 -translate-y-1/2 z-50 hidden md:flex flex-col pr-3 transition-all duration-500 ${
-          scrolled ? "opacity-100 translate-x-0" : "opacity-0 translate-x-6 pointer-events-none"
+          sidebarVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-6 pointer-events-none"
         }`}
         onMouseEnter={() => setSidebarHovered(true)}
         onMouseLeave={() => setSidebarHovered(false)}
@@ -119,14 +123,21 @@ export const NavSection = (): JSX.Element => {
               : "0 4px 20px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.05)",
           }}
         >
+          {/* Nav items */}
           {navItems.map(({ label, Icon, href }) => (
             <a
               key={href}
               href={href}
               data-testid={`link-sidebar-${label.toLowerCase()}`}
-              className={`flex items-center gap-2.5 rounded-xl text-white transition-all duration-200 hover:scale-105 hover:bg-white/12 ${
-                sidebarHovered ? "px-4 py-2.5 justify-start" : "px-2.5 py-2.5 justify-center"
-              }`}
+              className="flex items-center rounded-xl text-white hover:scale-105 hover:bg-white/12 overflow-hidden"
+              style={{
+                width: sidebarHovered ? "9rem" : "2.5rem",
+                height: "2.5rem",
+                padding: sidebarHovered ? "0 1rem" : "0",
+                justifyContent: sidebarHovered ? "flex-start" : "center",
+                gap: sidebarHovered ? "0.625rem" : "0",
+                transition: "width 300ms ease, padding 300ms ease, gap 300ms ease, transform 200ms ease, background 200ms ease",
+              }}
             >
               <Icon size={16} className="text-[#7ee8d8] shrink-0" />
               <span
@@ -143,17 +154,23 @@ export const NavSection = (): JSX.Element => {
 
           <div className="h-px bg-white/10 mx-1 my-1" />
 
-          {/* Resume */}
+          {/* Resume — same fixed dimensions as nav items, teal tint */}
           <a
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             data-testid="link-sidebar-resume"
-            className={`flex items-center gap-2.5 rounded-xl text-[#7ee8d8] bg-[#4d9e8e]/20 border border-[#4d9e8e]/35 hover:bg-[#4d9e8e]/40 hover:scale-105 transition-all duration-200 ${
-              sidebarHovered ? "px-4 py-2.5 justify-start" : "px-2.5 py-2.5 justify-center"
-            }`}
+            className="flex items-center rounded-xl text-[#7ee8d8] bg-[#4d9e8e]/20 border border-[#4d9e8e]/35 hover:bg-[#4d9e8e]/40 hover:scale-105 overflow-hidden"
+            style={{
+              width: sidebarHovered ? "9rem" : "2.5rem",
+              height: "2.5rem",
+              padding: sidebarHovered ? "0 1rem" : "0",
+              justifyContent: sidebarHovered ? "flex-start" : "center",
+              gap: sidebarHovered ? "0.625rem" : "0",
+              transition: "width 300ms ease, padding 300ms ease, gap 300ms ease, transform 200ms ease, background 200ms ease",
+            }}
           >
-            <FileText size={15} className="shrink-0" />
+            <FileText size={16} className="shrink-0" />
             <span
               className="text-sm font-medium whitespace-nowrap overflow-hidden transition-all duration-300"
               style={{
@@ -171,7 +188,7 @@ export const NavSection = (): JSX.Element => {
       <button
         data-testid="button-floating-menu"
         className={`fixed bottom-6 right-5 z-50 md:hidden w-12 h-12 flex items-center justify-center rounded-full backdrop-blur-md border text-white transition-all duration-500 ${
-          scrolled
+          sidebarVisible
             ? "opacity-100 bg-[#4d9e8e]/30 border-[#4d9e8e]/45 hover:bg-[#4d9e8e]/50"
             : "opacity-0 pointer-events-none"
         }`}
@@ -182,7 +199,7 @@ export const NavSection = (): JSX.Element => {
       </button>
 
       {/* Mobile overlay drawer — triggered from floating button when scrolled */}
-      {mobileOpen && scrolled && (
+      {mobileOpen && sidebarVisible && (
         <div className="fixed inset-0 z-40 md:hidden">
           <div
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
