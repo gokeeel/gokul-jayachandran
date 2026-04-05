@@ -44,49 +44,51 @@ export const HeroSection = (): JSX.Element => {
             </p>
           </div>
 
-          <p className="text-[#c0c0c0] text-xs md:text-lg font-light leading-relaxed hidden sm:block">
-            Building structured, scalable systems at the intersection of
-            technology and strategy — BA · SAP · Blockchain · SQL · Python
-          </p>
+          <div className="flex flex-col gap-4 md:gap-5 p-4 md:p-5 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10">
+            <p className="text-[#d0d0d0] text-xs md:text-base font-light leading-relaxed hidden sm:block">
+              Building structured, scalable systems at the intersection of
+              technology and strategy — BA · SAP · Blockchain · SQL · Python
+            </p>
 
-          <div className="flex items-center gap-2 md:gap-4 flex-wrap">
-            <a
-              href="mailto:gokuljai2006@gmail.com"
-              data-testid="link-email-hero"
-              className="px-4 py-2 md:px-6 md:py-3 bg-[#4d9e8e] text-white text-xs md:text-sm font-medium rounded-full hover:bg-[#3f857a] transition-colors"
-            >
-              Get in Touch
-            </a>
-            <a
-              href="#projects"
-              data-testid="link-view-work"
-              className="px-4 py-2 md:px-6 md:py-3 bg-white/10 backdrop-blur-sm text-white text-xs md:text-sm font-medium rounded-full border border-white/20 hover:bg-white/20 transition-colors"
-            >
-              View Work
-            </a>
-          </div>
+            <div className="flex items-center gap-2 md:gap-3 flex-wrap">
+              <a
+                href="mailto:gokuljai2006@gmail.com"
+                data-testid="link-email-hero"
+                className="px-4 py-2 md:px-6 md:py-3 bg-[#4d9e8e] text-white text-xs md:text-sm font-medium rounded-full hover:bg-[#3f857a] transition-colors"
+              >
+                Get in Touch
+              </a>
+              <a
+                href="#projects"
+                data-testid="link-view-work"
+                className="px-4 py-2 md:px-6 md:py-3 bg-white/10 text-white text-xs md:text-sm font-medium rounded-full border border-white/20 hover:bg-white/20 transition-colors"
+              >
+                View Work
+              </a>
+            </div>
 
-          <div className="flex items-center gap-3 mt-1">
-            <a
-              href="https://github.com/gokeeel"
-              target="_blank"
-              rel="noopener noreferrer"
-              data-testid="link-github"
-              aria-label="GitHub profile"
-              className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-white/10 backdrop-blur-sm rounded-full text-white hover:bg-white/20 transition-all duration-200"
-            >
-              <SiGithub size={15} />
-            </a>
-            <a
-              href="https://linkedin.com/in/gokeeel"
-              target="_blank"
-              rel="noopener noreferrer"
-              data-testid="link-linkedin"
-              aria-label="LinkedIn profile"
-              className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-white/10 backdrop-blur-sm rounded-full text-white hover:bg-white/20 transition-all duration-200"
-            >
-              <SiLinkedin size={15} />
-            </a>
+            <div className="flex items-center gap-3">
+              <a
+                href="https://github.com/gokeeel"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="link-github"
+                aria-label="GitHub profile"
+                className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-white/10 rounded-full text-white hover:bg-white/20 transition-all duration-200"
+              >
+                <SiGithub size={15} />
+              </a>
+              <a
+                href="https://linkedin.com/in/gokeeel"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="link-linkedin"
+                aria-label="LinkedIn profile"
+                className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-white/10 rounded-full text-white hover:bg-white/20 transition-all duration-200"
+              >
+                <SiLinkedin size={15} />
+              </a>
+            </div>
           </div>
         </div>
       </div>
