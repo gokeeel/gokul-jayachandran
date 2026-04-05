@@ -83,19 +83,21 @@ export const HeroSection = (): JSX.Element => {
               Gokul<br />Jayachandran
             </h1>
             <p className="text-sm md:text-xl font-light">
-              <span className="px-3 py-1 rounded-full bg-black/50 backdrop-blur-sm text-[#7ee8d8] border border-[#4d9e8e]/40">
+              <span className="px-3 py-1.5 rounded-xl bg-black/50 backdrop-blur-sm text-[#7ee8d8] border border-[#4d9e8e]/40 leading-snug">
                 Aspiring Techno-Functional Business Analyst
               </span>
             </p>
           </div>
 
-          {/* Interactive glassmorphism — description text only */}
-          <GlassCard>
-            <p className="relative z-10 text-[#d0d0d0] text-xs md:text-base font-light leading-relaxed hidden sm:block">
-              Building structured, scalable systems at the intersection of
-              technology and strategy — BA · SAP · Blockchain · SQL · Python
-            </p>
-          </GlassCard>
+          {/* Interactive glassmorphism — description text only, hidden on mobile */}
+          <div className="hidden sm:block">
+            <GlassCard>
+              <p className="relative z-10 text-[#d0d0d0] text-xs md:text-base font-light leading-relaxed">
+                Building structured, scalable systems at the intersection of
+                technology and strategy — BA · SAP · Blockchain · SQL · Python
+              </p>
+            </GlassCard>
+          </div>
 
           {/* Buttons — outside the glass */}
           <div className="flex items-center gap-2 md:gap-3 flex-wrap">
