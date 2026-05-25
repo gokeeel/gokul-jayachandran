@@ -1,14 +1,12 @@
 import { Switch, Route } from "wouter";
-import { Toaster } from "@/components/ui/toaster";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import NotFound from "@/pages/not-found";
+import { TooltipProvider } from "@radix-ui/react-tooltip";
 import { FrameScreen } from "@/pages/FrameScreen";
 
 function Router() {
   return (
     <Switch>
       <Route path="/" component={FrameScreen} />
-      <Route component={NotFound} />
+      <Route component={() => <div className="min-h-screen flex items-center justify-center text-white">404 - Page Not Found</div>} />
     </Switch>
   );
 }
@@ -16,7 +14,6 @@ function Router() {
 function App() {
   return (
     <TooltipProvider>
-      <Toaster />
       <Router />
     </TooltipProvider>
   );
