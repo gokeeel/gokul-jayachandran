@@ -1,4 +1,5 @@
-import { SiPython, SiJavascript, SiHtml5, SiCss3, SiSolidity, SiMysql, SiPostgresql, SiMongodb, SiFirebase, SiGit, SiGithub, SiFigma, SiVisualstudiocode, SiJira, SiPostman } from "react-icons/si";
+import { SiPython, SiJavascript, SiHtml5, SiCss3, SiSolidity, SiMysql, SiPostgresql, SiMongodb, SiFirebase, SiGit, SiGithub, SiFigma, SiJira, SiPostman } from "react-icons/si";
+import { Terminal } from "lucide-react";
 
 const skillCategories = [
   {
@@ -28,7 +29,7 @@ const skillCategories = [
     icons: [
       { icon: <SiGit size={32} />, label: "Git", color: "#F05032" },
       { icon: <SiGithub size={32} />, label: "GitHub", color: "#fff" },
-      { icon: <SiVisualstudiocode size={32} />, label: "VS Code", color: "#007ACC" },
+      { icon: <Terminal size={32} />, label: "VS Code", color: "#007ACC" },
       { icon: <SiPostman size={32} />, label: "Postman", color: "#FF6C37" },
       { icon: <SiFigma size={32} />, label: "Figma", color: "#F24E1E" },
     ],
