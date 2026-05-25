@@ -28,10 +28,8 @@ const certifications = [
 ];
 
 const achievements = [
-  { icon: "🥇", title: "Hackathon Winner", detail: "ChemOvate 2026" },
-  { icon: "🏅", title: "Hackathon Finalist", detail: "ChemOvate 2025 · NxtGen 2026 · Statathon 2025 · Hack the Horizon 2025" },
-  { icon: "🎓", title: "Campus Leadership", detail: "President – Youth United Council of India" },
-  { icon: "🚨", title: "Club Influencer", detail: "Disaster Management & Safety Club" },
+  { icon: "🥇", title: "Hackathon Winner", detail: "ChemOvate 2026 · Finalist: NxtGen 2026, Statathon 2025, Hack the Horizon 2025" },
+  { icon: "🎓", title: "Campus Leadership", detail: "President – Youth United Council of India · Disaster Management & Safety Club" },
 ];
 
 export const ExperienceSection = (): JSX.Element => {

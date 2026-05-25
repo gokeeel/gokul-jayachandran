@@ -41,12 +41,12 @@ const skillCategories = [
   {
     title: "Core Concepts",
     description: "Strong foundation in computer science principles and business analysis methodologies.",
-    pills: ["Requirements Engineering", "System Design", "Process Mapping", "Gap Analysis", "Data Modeling", "Agile/Scrum"],
+    pills: ["Requirements Engineering", "Gap Analysis", "Agile/Scrum"],
   },
   {
     title: "Soft Skills",
     description: "Committed to continuous learning and collaborative excellence.",
-    pills: ["Stakeholder Management", "Problem Solving", "Communication", "Leadership", "Time Management"],
+    pills: ["Stakeholder Management", "Leadership", "Communication"],
   },
 ];
 

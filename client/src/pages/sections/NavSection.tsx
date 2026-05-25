@@ -55,7 +55,7 @@ export const NavSection = (): JSX.Element => {
               </a>
             ))}
             <a
-              href="/resume.pdf"
+              href="https://drive.google.com/file/d/1M1ea_Z2_FhE19c-njG2yyQu_-_4D3sHp/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               data-testid="button-resume"
@@ -91,7 +91,7 @@ export const NavSection = (): JSX.Element => {
               </a>
             ))}
             <a
-              href="/resume.pdf"
+              href="https://drive.google.com/file/d/1M1ea_Z2_FhE19c-njG2yyQu_-_4D3sHp/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               data-testid="button-mobile-resume"
@@ -156,7 +156,7 @@ export const NavSection = (): JSX.Element => {
 
           {/* Resume — same fixed dimensions as nav items, teal tint */}
           <a
-            href="/resume.pdf"
+            href="https://drive.google.com/file/d/1M1ea_Z2_FhE19c-njG2yyQu_-_4D3sHp/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             data-testid="link-sidebar-resume"
@@ -217,7 +217,7 @@ export const NavSection = (): JSX.Element => {
               </a>
             ))}
             <a
-              href="/resume.pdf"
+              href="https://drive.google.com/file/d/1M1ea_Z2_FhE19c-njG2yyQu_-_4D3sHp/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 px-5 py-3 rounded-full text-sm font-medium text-[#7ee8d8] bg-[#4d9e8e]/25 border border-[#4d9e8e]/40 text-center hover:bg-[#4d9e8e]/40 transition-colors"
