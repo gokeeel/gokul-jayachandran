@@ -10,6 +10,7 @@ const allowlist = [
   "connect-pg-simple",
   "cors",
   "date-fns",
+  "drizzle-kit",
   "drizzle-orm",
   "drizzle-zod",
   "express",
