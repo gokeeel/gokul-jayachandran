@@ -17,8 +17,7 @@ services:
 
 databases:
   - name: portfolio-db
-    engine: postgres
-    version: "16"
+    databaseName: portfolio_db
+    user: portfolio_user
     plan: free
-    initializer:
-      startCommand: npm run db:push
+    postgresMajorVersion: "16"
