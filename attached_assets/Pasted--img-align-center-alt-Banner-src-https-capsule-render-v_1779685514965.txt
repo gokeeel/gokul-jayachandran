@@ -1,0 +1,246 @@
+<img align="center" alt="Banner" src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=200&section=header&text=Gokul%20Jayachandran&fontSize=50&fontColor=ffffff&fontAlignY=38&desc=Aspiring%20Techno-Functional%20Business%20Analyst&descAlignY=58&descSize=20&animation=fadeIn"/>
+
+<h1 align="left">
+  <img src="https://user-images.githubusercontent.com/18350557/176309783-0785949b-9127-417c-8b55-ab5a4333674e.gif" width="28" />
+  Hi, I'm <strong>GOKUL JAYACHANDRAN</strong>
+</h1>
+
+<h3>Techno-Functional BA | SQL • Blockchain • Python • Requirements Engineering</h3>
+
+<div align="left">
+  <img align="right" width="360" src="https://user-images.githubusercontent.com/74038190/212749447-bfb7e725-6987-49d9-ae85-2015e3e7cc41.gif" />
+
+  <p>
+    I am an <strong>Aspiring Techno-Functional Business Analyst</strong> focused on building structured, scalable systems that solve real-world business problems.<br/>
+    My work sits at the intersection of <strong>technology and strategy</strong>, where I design and implement solutions that translate complex ideas into functional products.<br/>
+    I am particularly interested in <strong>platform-based systems, financial technology, and data-driven decision models</strong>.
+  </p>
+
+  <p>
+    <img src="https://img.shields.io/badge/📍_Chennai,_India-0f0c29?style=for-the-badge" />
+    <a href="mailto:gokuljai2006@gmail.com"><img src="https://img.shields.io/badge/📧_gokuljai2006@gmail.com-302b63?style=for-the-badge" /></a>
+    <img src="https://img.shields.io/badge/🤝_Open_to_Internships_&_Collaborations-24243e?style=for-the-badge" />
+    <img src="https://img.shields.io/badge/🎯_Target:_Techno--Functional_BA-0f0c29?style=for-the-badge" />
+  </p>
+
+  <h3>🌐 Socials</h3>
+
+  <p align="left">
+    <a href="https://github.com/gokeeel">
+      <img src="https://img.shields.io/badge/GitHub-1A1A1A?style=for-the-badge&logo=github&logoColor=white" />
+    </a>
+    <a href="https://linkedin.com/in/gokeeel">
+      <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+    </a>
+  </p>
+
+  <img src="https://komarev.com/ghpvc/?username=gokeeel&style=flat-square&color=302b63" alt="Profile Views"/>
+</div>
+
+<br clear="all" />
+
+---
+
+## 🧭 What I Do
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/212284158-e840e285-664b-44d7-b79b-e264b5e54825.gif" width="400"/>
+</div>
+
+<br/>
+
+<table align="center">
+<tr>
+<td align="center" width="33%">
+  <img src="https://img.shields.io/badge/📋-Requirements_Engineering-0f0c29?style=for-the-badge"/><br/>
+  <sub>BRD · FRS · User Stories · Gap Analysis</sub>
+</td>
+<td align="center" width="33%">
+  <img src="https://img.shields.io/badge/⛓️-Blockchain_Solutions-24243e?style=for-the-badge"/><br/>
+  <sub>Smart Contracts · Decentralized Apps · Web3</sub>
+</td>
+<td align="center" width="33%">
+  <img src="https://img.shields.io/badge/📊-Data_&_Analytics-0f0c29?style=for-the-badge"/><br/>
+  <sub>SQL · Python · Reporting · Decision Models</sub>
+</td>
+</tr>
+</table>
+
+---
+
+## 🛠️ Skills & Tools
+
+<p align="center">
+<table>
+<tr>
+<td width="50%" align="center">
+  <h3>💻 Programming & Scripting</h3>
+  <img src="https://skillicons.dev/icons?i=python,js,html,css,solidity" />
+  <br/><br/>
+</td>
+<td width="50%" align="center">
+  <h3>🗄️ Databases</h3>
+  <img src="https://skillicons.dev/icons?i=mysql,postgresql,mongodb,firebase" />
+  <br/><br/>
+</td>
+</tr>
+<tr>
+<td width="50%" align="center">
+  <h3>🧰 Tools & Platforms</h3>
+  <img src="https://skillicons.dev/icons?i=git,vscode,postman,figma,github" />
+  <br/><br/>
+</td>
+<td width="50%" align="center">
+  <h3>📊 BA & Analytics Tools</h3>
+  <br/>
+  <img src="https://img.shields.io/badge/JIRA-0052CC?style=for-the-badge&logo=jira&logoColor=white"/>
+  <img src="https://img.shields.io/badge/MS_Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Confluence-172B4D?style=for-the-badge&logo=confluence&logoColor=white"/>
+  <br/><br/>
+</td>
+</tr>
+</table>
+</p>
+
+---
+
+## 🚀 Featured Projects
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="700"/>
+</div>
+
+<br/>
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### 🔐 DeFiScore: Privacy-Preserving On-Chain Credit System
+> Production-ready decentralized credit scoring platform that computes wallet creditworthiness off-chain and verifies eligibility on-chain using Zero-Knowledge proofs — enabling under-collateralized DeFi lending without exposing credit scores or transaction history.
+
+**Tech:** `Solidity` `Python` `Blockchain` `ZK Proofs` `Smart Contracts`
+
+> 🔒 Private Repository
+
+</td>
+<td width="50%" valign="top">
+
+### 📊 Marquelytix: Real-time Customer Sentiment SaaS
+> Full-stack SaaS platform for real-time customer sentiment monitoring targeted at micro and small businesses. Provides Brand24-style analytics with ML-powered sentiment analysis across social media and review sources.
+
+**Tech:** `React` `TypeScript` `Node.js` `PostgreSQL` `Hugging Face API`
+
+[![Repo](https://img.shields.io/badge/GitHub-View_Repo-1A1A1A?style=for-the-badge&logo=github)](https://github.com/gokeeel/Marquelytix)
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 🛡️ Anvikshan: Risk-Based Data Privacy Enforcement
+> Government-grade data privacy enforcement system for unit-level datasets. Assesses anonymisation and encryption effectiveness, applies risk-based safeguards to sensitive identifiers, and enables controlled data dissemination while maintaining analytical utility and compliance.
+
+**Tech:** `Python` `Encryption` `PostgreSQL` `Data Governance`
+
+> 🔒 Private Repository
+
+</td>
+<td width="50%" valign="top">
+
+### 🪔 IndiCraft: Artisan Marketplace Platform
+> AI-powered global marketplace connecting Indian artisans with international buyers. Features smart product discovery, regional and seasonal categorization, seller verification, and the DNK Scheme for affordable global export logistics — empowering rural creators through digital commerce.
+
+**Tech:** `React` `Python` `AI/ML` `PostgreSQL`
+
+[![Live](https://img.shields.io/badge/Demo-Live_Preview-302b63?style=for-the-badge)](https://indicraft.vercel.app/login)
+
+</td>
+</tr>
+</table>
+
+---
+
+## 💼 Experience
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/212284087-bbe7e430-757e-4901-90bf-4cd2ce3e1852.gif" width="100"/>
+</div>
+
+<br/>
+
+> **💻 Software Developer Intern** — *SprintXplore* *(Jan 2026 – Apr 2026)*
+>
+> Developed DeFiScore, a privacy-preserving on-chain credit verification system using blockchain technology. Implemented smart contracts for under-collateralized DeFi lending and built cryptographic solutions that enable credit verification without exposing sensitive transaction data.
+
+---
+
+> **📣 Marketing & Sales Intern** — *DOT CoWork* *(Jun 2025 – Jul 2025)*
+>
+> Handled 50+ cold calls and led lead generation initiatives, conducting workspace tours for potential clients. Managed client onboarding processes and developed marketing strategies to optimize conversion rates. Utilized marketing funnels and UI/UX principles to enhance customer engagement and retention.
+
+---
+
+## 📜 Certifications
+
+| 🏅 Certification | 🏢 Issuer | 📅 Year |
+|---|---|---|
+| Business to Business Marketing | NPTEL | 2024 |
+| Programming in Java | NPTEL | 2024 |
+| The Joy of Computing using Python | NPTEL | 2023 |
+| Agile Scrum in Practice | Infosys | 2024 |
+| National Level STTP 2k24 | Brainovision Solutions | 2024 |
+
+---
+
+## 🏆 Achievements & Leadership
+
+| 🎖️ | Details |
+|---|---|
+| 🥇 Hackathon Winner | ChemOvate 2026 |
+| 🏅 Hackathon Finalist | ChemOvate 2025 · NxtGen 2026 · Statathon 2025 · Hack the Horizon 2025 |
+| 🎓 Campus Leadership | President – Youth United Council of India |
+| 🚨 Club Influencer | Disaster Management & Safety Club |
+
+---
+
+## 📊 GitHub Stats
+
+<div align="center">
+  <br/>
+  <img src="https://github-readme-stats.vercel.app/api?username=gokeeel&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0f0c29&title_color=a78bfa&icon_color=a78bfa&text_color=ffffff" height="160"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=gokeeel&layout=compact&theme=tokyonight&hide_border=true&bg_color=0f0c29&title_color=a78bfa&text_color=ffffff" height="160"/>
+  <br/><br/>
+  <img src="https://streak-stats.demolab.com/?user=gokeeel&theme=tokyonight&hide_border=true&background=0f0c29&ring=a78bfa&fire=a78bfa&currStreakLabel=a78bfa" alt="Streak" />
+</div>
+
+# Check out my leetcode heatmap
+
+![Leetcode Stats](https://leetcard.jacoblin.cool/gokeeel?ext=heatmap)
+
+<p align="left"> 
+  <img src="https://komarev.com/ghpvc/?username=gokeeel&label=Profile%20views&color=0e75b6&style=flat" alt="gokeeel" /> 
+</p>
+
+---
+
+## 🤝 Let's Connect
+
+<div align="center">
+  <p>
+    <em>I'm always open to interesting conversations, internship opportunities, and collaborative projects in <strong>BA, FinTech, or Blockchain</strong>.</em>
+  </p>
+  <a href="mailto:gokuljai2006@gmail.com">
+    <img src="https://img.shields.io/badge/📧_Drop_Me_a_Mail-0f0c29?style=for-the-badge"/>
+  </a>
+  <a href="https://linkedin.com/in/gokeeel">
+    <img src="https://img.shields.io/badge/💼_Connect_on_LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
+  </a>
+  <a href="https://github.com/gokeeel">
+    <img src="https://img.shields.io/badge/⭐_Follow_on_GitHub-1A1A1A?style=for-the-badge&logo=github&logoColor=white"/>
+  </a>
+</div>
+
+<br/>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:24243e,50:302b63,100:0f0c29&height=120&section=footer"/>

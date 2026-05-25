@@ -1,4 +1,4 @@
-import { SiPython, SiJavascript, SiHtml5, SiCss3, SiSolidity, SiMysql, SiPostgresql, SiMongodb, SiFirebase, SiGit, SiGithub, SiFigma, SiNotion, SiJira, SiPostman } from "react-icons/si";
+import { SiPython, SiJavascript, SiHtml5, SiCss3, SiSolidity, SiMysql, SiPostgresql, SiMongodb, SiFirebase, SiGit, SiGithub, SiFigma, SiVisualstudiocode, SiJira, SiPostman } from "react-icons/si";
 
 const skillCategories = [
   {
@@ -28,15 +28,15 @@ const skillCategories = [
     icons: [
       { icon: <SiGit size={32} />, label: "Git", color: "#F05032" },
       { icon: <SiGithub size={32} />, label: "GitHub", color: "#fff" },
+      { icon: <SiVisualstudiocode size={32} />, label: "VS Code", color: "#007ACC" },
       { icon: <SiPostman size={32} />, label: "Postman", color: "#FF6C37" },
       { icon: <SiFigma size={32} />, label: "Figma", color: "#F24E1E" },
-      { icon: <SiNotion size={32} />, label: "Notion", color: "#fff" },
     ],
   },
   {
     title: "BA & ERP Tools",
     description: "Proficient in enterprise tools for business analysis and process management.",
-    pills: ["SAP", "Salesforce", "JIRA", "MS Excel", "Confluence", "Power BI"],
+    pills: ["SAP", "JIRA", "MS Excel", "Confluence"],
   },
   {
     title: "Core Concepts",

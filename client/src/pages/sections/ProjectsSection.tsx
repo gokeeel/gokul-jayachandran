@@ -1,38 +1,37 @@
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Lock } from "lucide-react";
 import { SiGithub } from "react-icons/si";
 
 const projects = [
   {
-    title: "SupplyChain on Blockchain",
+    title: "DeFiScore: Privacy-Preserving On-Chain Credit System",
     description:
-      "Decentralized supply chain transparency platform using Ethereum smart contracts. Tracks goods from manufacturer to retailer with immutable audit trails.",
-    tech: ["Solidity", "Web3.js", "Python", "MySQL"],
-    repoUrl: "https://github.com/gokeeel",
-    demoUrl: "https://github.com/gokeeel",
+      "Production-ready decentralized credit scoring platform that computes wallet creditworthiness off-chain and verifies eligibility on-chain using Zero-Knowledge proofs — enabling under-collateralized DeFi lending without exposing credit scores or transaction history.",
+    tech: ["Solidity", "Python", "Blockchain", "ZK Proofs", "Smart Contracts"],
+    isPrivate: true,
     accent: "#4d9e8e",
   },
   {
-    title: "BRD Automation Tool",
+    title: "Marquelytix: Real-time Customer Sentiment SaaS",
     description:
-      "Python-based tool that auto-generates Business Requirement Documents from structured user input templates, reducing documentation time by ~60%.",
-    tech: ["Python", "Jinja2", "SQL", "Excel"],
-    repoUrl: "https://github.com/gokeeel",
+      "Full-stack SaaS platform for real-time customer sentiment monitoring targeted at micro and small businesses. Provides Brand24-style analytics with ML-powered sentiment analysis across social media and review sources.",
+    tech: ["React", "TypeScript", "Node.js", "PostgreSQL", "Hugging Face API"],
+    repoUrl: "https://github.com/gokeeel/Marquelytix",
     accent: "#60a5fa",
   },
   {
-    title: "FinTech Dashboard",
+    title: "Anvikshan: Risk-Based Data Privacy Enforcement",
     description:
-      "Data-driven financial analytics dashboard for SMEs. Provides real-time KPI tracking, cash flow insights, and anomaly detection using SQL pipelines.",
-    tech: ["Python", "SQL", "Power BI", "PostgreSQL"],
-    repoUrl: "https://github.com/gokeeel",
+      "Government-grade data privacy enforcement system for unit-level datasets. Assesses anonymisation and encryption effectiveness, applies risk-based safeguards to sensitive identifiers, and enables controlled data dissemination while maintaining analytical utility and compliance.",
+    tech: ["Python", "Encryption", "PostgreSQL", "Data Governance"],
+    isPrivate: true,
     accent: "#34d399",
   },
   {
-    title: "SAP Process Mapper",
+    title: "IndiCraft: Artisan Marketplace Platform",
     description:
-      "Workflow documentation and gap-analysis tool built to map SAP SD/MM business processes, identify inefficiencies, and generate process flow reports.",
-    tech: ["SAP", "Python", "Excel", "Figma"],
-    repoUrl: "https://github.com/gokeeel",
+      "AI-powered global marketplace connecting Indian artisans with international buyers. Features smart product discovery, regional and seasonal categorization, seller verification, and the DNK Scheme for affordable global export logistics — empowering rural creators through digital commerce.",
+    tech: ["React", "Python", "AI/ML", "PostgreSQL"],
+    demoUrl: "https://indicraft.vercel.app/login",
     accent: "#fbbf24",
   },
 ];
@@ -57,35 +56,48 @@ export const ProjectsSection = (): JSX.Element => {
             >
               <div className="flex items-start justify-between">
                 <div
-                  className="w-3 h-3 rounded-full"
+                  className="w-3 h-3 rounded-full mt-1"
                   style={{ backgroundColor: project.accent }}
                 />
                 <div className="flex items-center gap-3">
-                  <a
-                    href={project.repoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    data-testid={`link-project-repo-${index}`}
-                    className="text-[#a9a9a9] hover:text-white transition-colors"
-                  >
-                    <SiGithub size={18} />
-                  </a>
-                  {project.demoUrl && (
-                    <a
-                      href={project.demoUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      data-testid={`link-project-demo-${index}`}
-                      className="text-[#a9a9a9] hover:text-white transition-colors"
-                    >
-                      <ExternalLink size={18} />
-                    </a>
+                  {project.isPrivate ? (
+                    <span className="flex items-center gap-1.5 text-[#a9a9a9] text-xs border border-white/10 px-2.5 py-1 rounded-full">
+                      <Lock size={11} />
+                      Private
+                    </span>
+                  ) : (
+                    <>
+                      {project.repoUrl && (
+                        <a
+                          href={project.repoUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          data-testid={`link-project-repo-${index}`}
+                          className="text-[#a9a9a9] hover:text-white transition-colors"
+                          aria-label="GitHub repository"
+                        >
+                          <SiGithub size={18} />
+                        </a>
+                      )}
+                      {project.demoUrl && (
+                        <a
+                          href={project.demoUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          data-testid={`link-project-demo-${index}`}
+                          className="text-[#a9a9a9] hover:text-white transition-colors"
+                          aria-label="Live demo"
+                        >
+                          <ExternalLink size={18} />
+                        </a>
+                      )}
+                    </>
                   )}
                 </div>
               </div>
 
               <div className="flex flex-col gap-3">
-                <h3 className="text-white font-medium text-2xl group-hover:text-[#4d9e8e] transition-colors">
+                <h3 className="text-white font-medium text-xl group-hover:text-[#4d9e8e] transition-colors leading-snug">
                   {project.title}
                 </h3>
                 <p className="text-[#a9a9a9] text-base font-light leading-relaxed">
